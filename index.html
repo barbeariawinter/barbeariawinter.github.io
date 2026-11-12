@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#051F20">
+  <meta name="description" content="Barbearia Winter — Seu Estilo Nossa Assinatura. Agende seu horário e conheça o Winter Club em Itajaí, SC.">
+  <title>Barbearia Winter | Seu Estilo Nossa Assinatura</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #051F20;
+      --panel: #132C29;
+      --panel-2: #1D3430;
+      --olive: #7B896F;
+      --olive-light: #7B896F;
+      --cream: #FBF2E1;
+      --muted: rgba(251,242,225,.68);
+      --line: rgba(251,242,225,.14);
+    }
+    :root { box-sizing: border-box; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+    html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; min-height: 100vh; color: var(--cream); background:
+      radial-gradient(ellipse at 50% -15%, rgba(123,137,111,.30), transparent 55%),
+      var(--bg);
+      font-family: "DM Sans", sans-serif; -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .shell { width: min(100% - 36px, 520px); margin: 0 auto; padding: 42px 0 30px; }
+    .brand { text-align: center; }
+    .brand-logo {
+      display: block; width: min(100%, 390px); height: auto; margin: 0 auto;
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,.18));
+    }
+    .eyebrow { color: var(--olive-light); font-size: 10px; font-weight: 700; letter-spacing: .34em; text-transform: uppercase; margin: 5px 0 8px; }
+    h1 { font: 600 clamp(38px, 10vw, 52px)/.98 "Oswald", sans-serif; text-transform: uppercase; letter-spacing: .045em; margin: 0; }
+    h1 span { color: var(--olive-light); }
+    .tagline { color: rgba(251,242,225,.8); font-size: 12px; letter-spacing: .13em; text-transform: uppercase; margin: 13px 0 0; }
+    .intro { text-align: center; margin: 29px 0 25px; }
+    .intro p { color: var(--muted); font-size: 13px; line-height: 1.65; margin: 0; }
+    .intro strong { color: var(--cream); font-weight: 600; }
+    .section-label { display: flex; align-items: center; gap: 12px; margin: 25px 0 12px; color: var(--olive-light); font-size: 10px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; }
+    .section-label:after { content:""; height: 1px; flex: 1; background: var(--line); }
+    .actions { display: grid; gap: 10px; }
+    .action {
+      min-height: 66px; padding: 13px 16px; display: flex; align-items: center; gap: 14px;
+      border: 1px solid var(--line); border-radius: 5px; background: linear-gradient(110deg, rgba(251,242,225,.05), rgba(251,242,225,.02));
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .action:hover { transform: translateY(-2px); border-color: rgba(123,137,111,.85); background: var(--panel-2); }
+    .action.primary { background: var(--olive); color: #000; border-color: var(--olive); }
+    .action.primary:hover { background: #88947A; }
+    .action.club { background: linear-gradient(110deg, #1D3430, #132C29); border-color: rgba(123,137,111,.6); }
+    .icon {
+      flex: 0 0 38px; width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center;
+      color: var(--olive-light); background: rgba(123,137,111,.18);
+    }
+    .primary .icon { color: #000; background: rgba(0,0,0,.09); }
+    .icon svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+    .action-copy { min-width: 0; flex: 1; }
+    .action-title { display: block; font-size: 14px; font-weight: 700; letter-spacing: .01em; }
+    .action-sub { display: block; font-size: 11px; opacity: .7; margin-top: 3px; }
+    .arrow { font-size: 20px; opacity: .7; padding-left: 5px; }
+    .club .action-title { font: 500 18px "Oswald", sans-serif; text-transform: uppercase; letter-spacing: .06em; }
+    .club .action-sub { color: rgba(251,242,225,.8); }
+    .details { margin-top: 22px; padding: 18px; border: 1px solid var(--line); border-radius: 5px; background: rgba(251,242,225,.03); }
+    .details h2 { font: 500 18px "Oswald", sans-serif; text-transform: uppercase; letter-spacing: .08em; margin: 0 0 12px; }
+    .hours { display: grid; grid-template-columns: 1fr auto; gap: 8px 16px; font-size: 12px; color: var(--muted); }
+    .hours strong { color: var(--cream); font-weight: 500; text-align: right; }
+    .address { border-top: 1px solid var(--line); margin-top: 14px; padding-top: 13px; color: var(--muted); font-size: 12px; line-height: 1.6; }
+    .address strong { color: var(--cream); display: block; margin-bottom: 2px; }
+    .socials { display: flex; justify-content: center; gap: 10px; margin: 22px 0 0; }
+    .socials a { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--muted); transition: .2s; }
+    .socials a:hover { color: var(--olive-light); border-color: var(--olive); }
+    .socials svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+    footer { text-align: center; margin-top: 25px; color: rgba(251,242,225,.5); font-size: 10px; letter-spacing: .1em; line-height: 1.8; text-transform: uppercase; }
+    footer b { color: var(--olive-light); font-weight: 600; }
+    @media (min-width: 700px) { .shell { padding-top: 56px; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *:before, *:after { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="brand">
+      <img class="brand-logo" src="data:image/png;base64,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" alt="Barbearia Winter — Est. 2016">
+      <p class="tagline">Seu Estilo Nossa Assinatura</p>
+    </header>
+
+    <section class="intro" aria-label="Apresentação">
+      <p>Seu momento é aqui.<br><strong>Experiência, cuidado e identidade em cada detalhe.</strong></p>
+    </section>
+
+    <p class="section-label">Comece por aqui</p>
+    <nav class="actions" aria-label="Ações principais">
+      <a class="action club" href="https://app.galaxpay.com.br/landingpage7976606/winterclub" target="_blank" rel="noopener">
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg></span>
+        <span class="action-copy"><span class="action-title">Conheça o Winter Club</span><span class="action-sub">Seu cuidado em uma experiência contínua</span></span>
+        <span class="arrow">↗</span>
+      </a>
+      <a class="action primary" href="https://cashbarber.com.br/barbeariawinter" target="_blank" rel="noopener">
+        <span class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg></span>
+        <span class="action-copy"><span class="action-title">Agende seu horário</span><span class="action-sub">Escolha o profissional e reserve seu momento</span></span>
+        <span class="arrow">↗</span>
+      </a>
+      <a class="action" href="https://wa.me/5547992827140" target="_blank" rel="noopener">
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3 20l1-4.7a8.5 8.5 0 1 1 16.5-3.6Z"/><path d="M8.5 8.5c.5 2.5 2.5 4.5 5 5l1.2-1.2 2 .9"/></svg></span>
+        <span class="action-copy"><span class="action-title">Fale pelo WhatsApp</span><span class="action-sub">Atendimento e informações</span></span>
+        <span class="arrow">↗</span>
+      </a>
+    </nav>
+
+    <p class="section-label">Encontre a Winter</p>
+    <div class="actions">
+      <a class="action" href="https://www.google.com/maps/place/Barbearia+Winter/@-26.9454086,-48.7446246,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xa65f0f281b3cfa7e!8m2!3d-26.9454086!4d-48.7424359" target="_blank" rel="noopener">
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+        <span class="action-copy"><span class="action-title">Como chegar</span><span class="action-sub">Av. Itaipava, 4202 — Itaipava, Itajaí/SC</span></span>
+        <span class="arrow">↗</span>
+      </a>
+      <a class="action" href="https://g.page/r/CX76PBsoD1-mEAg/review" target="_blank" rel="noopener">
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg></span>
+        <span class="action-copy"><span class="action-title">Avalie sua experiência</span><span class="action-sub">Sua opinião ajuda a Winter a evoluir</span></span>
+        <span class="arrow">↗</span>
+      </a>
+    </div>
+
+    <section class="details" aria-label="Horários de atendimento">
+      <h2>Horários de atendimento</h2>
+      <div class="hours">
+        <span>Segunda a sexta</span><strong>09h–12h · 13h30–20h</strong>
+        <span>Sábado</span><strong>08h–12h · 13h30–18h</strong>
+        <span>Domingo</span><strong>Fechado</strong>
+      </div>
+      <div class="address"><strong>Barbearia Winter — Itajaí / Itaipava</strong>Estacionamento amplo. Estamos esperando por você.</div>
+    </section>
+
+    <div class="socials" aria-label="Redes sociais">
+      <a href="https://www.instagram.com/barbeariawinteritajai/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
+      </a>
+      <a href="https://www.facebook.com/barbeariawinter" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M14 21v-8h3l.5-4H14V7c0-1.2.4-2 2-2h1.7V1.5C17 1.3 15.8 1 14.3 1 11 1 9 3 9 6.7V9H6v4h3v8"/></svg>
+      </a>
+    </div>
+
+    <footer><b>Barbearia Winter</b><br>Seu Estilo Nossa Assinatura!<br>© 2026 · Itajaí, Santa Catarina</footer>
+  </main>
+</body>
+</html>
